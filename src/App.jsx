@@ -3,7 +3,7 @@ import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import axios from 'axios';
 
-const API_URL = 'https://backend-with-go-todo-1.onrender.com/todos'; // Update this URL
+const API_URL = 'https://backend-with-go-todo-1.onrender.com/todos'; 
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -15,7 +15,7 @@ const App = () => {
   const fetchTodos = async () => {
     try {
       const response = await axios.get(API_URL);
-      setTodos(response.data || []); // Ensure it's an array
+      setTodos(response.data || []); 
     } catch (error) {
       console.error('Error fetching todos:', error);
     }
